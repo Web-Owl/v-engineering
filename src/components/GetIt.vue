@@ -13,7 +13,7 @@ export default {
         <div class="content grid">
             <div class="item">
                                     <h2>Сейчас</h2>
-                    <p>Вы оставляете заявку на бесплатную консультацию <br>или звоните по телефону +7(812)425-62-76.</p>
+                    <p>Вы оставляете заявку на бесплатную консультацию <br>или звоните по телефону {{$store.state.phoneNumber}}</p>
                                     <h2>15 минут</h2>
                     <p>Мы подробно Вас консультируем и отвечаем <br>на все Ваши вопросы. Называем примерную <br>стоимость системы для Вашего объекта</p>
                                     <h2>60 минут</h2>
@@ -40,8 +40,8 @@ export default {
 <input type="hidden" name="_wpcf7cf_options" value="{&quot;form_id&quot;:209,&quot;conditions&quot;:[],&quot;settings&quot;:{&quot;animation&quot;:&quot;yes&quot;,&quot;animation_intime&quot;:200,&quot;animation_outtime&quot;:200,&quot;notice_dismissed&quot;:false,&quot;regex_numeric&quot;:&quot;^[0-9]+$&quot;,&quot;regex_alphabetic&quot;:&quot;^[a-zA-Z]+$&quot;,&quot;regex_alphanumeric&quot;:&quot;^[a-zA-Z0-9]+$&quot;,&quot;regex_date&quot;:&quot;^(0?[1-9]|1[012])[- .](0?[1-9]|[12][0-9]|3[01])[- \/.](19|20)?[0-9]{2}$&quot;,&quot;regex_email&quot;:&quot;^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$&quot;,&quot;regex_numeric_label&quot;:&quot;numeric&quot;,&quot;regex_alphabetic_label&quot;:&quot;alphabetic&quot;,&quot;regex_alphanumeric_label&quot;:&quot;alphanumeric&quot;,&quot;regex_date_label&quot;:&quot;date&quot;,&quot;regex_email_label&quot;:&quot;email&quot;,&quot;regex_custom_1&quot;:&quot;&quot;,&quot;regex_custom_2&quot;:&quot;&quot;,&quot;regex_custom_3&quot;:&quot;&quot;,&quot;regex_custom_4&quot;:&quot;&quot;,&quot;regex_custom_5&quot;:&quot;&quot;,&quot;regex_custom_1_label&quot;:&quot;custom 1&quot;,&quot;regex_custom_2_label&quot;:&quot;custom 2&quot;,&quot;regex_custom_3_label&quot;:&quot;custom 3&quot;,&quot;regex_custom_4_label&quot;:&quot;custom 4&quot;,&quot;regex_custom_5_label&quot;:&quot;custom 5&quot;}}" />
 <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
 </div>
-<h2><h2>Бесплатная консультация</h2>
-<p>Введите номер телефона и в течение <br>9 минут с Вами свяжется специалист</p></h2>
+<h2>Бесплатная консультация</h2>
+<p>Введите номер телефона и в течение <br>9 минут с Вами свяжется специалист</p>
 <span class="wpcf7-form-control-wrap tel-462"><input type="tel" name="tel-462" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel pre-last-input" aria-required="true" aria-invalid="false" placeholder="Ваш телефон" /></span>
 <button class="button button_form">Получить консультацию</button><div class="wpcf7-response-output" aria-hidden="true"></div></form></div>            </div>
         </div>

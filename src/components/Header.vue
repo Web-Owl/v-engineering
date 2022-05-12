@@ -26,8 +26,8 @@ export default {
             </div>
             <div class="item telefon-block">
                 <h4>Есть вопросы? Звоните:</h4>
-                <a class="phone" href="tel:+7(812)425-62-76">+7(812)425-62-76</a>
-                <p>Без выходных с 09:00-21:00<br><a class="email" href="mailto:mail@taksecure.ru">mail@taksecure.ru</a>
+                <a class="phone" :href="$store.getters.phoneHref">{{$store.state.phoneNumber}}</a>
+                <p>Без выходных с 09:00-21:00<br><a class="email" :href="$store.getters.mailTo">{{$store.state.email}}</a>
                 </p>
             </div>
             <div class="item">
@@ -44,8 +44,8 @@ export default {
                     <span>Видеонаблюдение</span><br><span>с пожизненной</span><br><span>гарантией</span>
                 </h1>
                 <p>
-                    В Санкт-Петербурге
-                    <br>и ЛО за
+                    В Москве
+                    <br>и МО за
                     <span>48 часов</span>
                 </p>
                     <a href="#s8">

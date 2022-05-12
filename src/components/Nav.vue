@@ -25,7 +25,7 @@ export default {
                     <a class="nav-link" href="#s8">Камера Онлайн</a>
                 </li>
                 <li class="lasts">
-                    <a href="callto:+7(812)425-62-76">+7(812)425-62-76</a>
+                    <a :href="$store.getters.phoneHref">{{$store.state.phoneNumber}}</a>
                 </li>
             </ul>
         </nav>
@@ -42,9 +42,9 @@ export default {
                     <a class="nav-link" href="#s8">Камера Онлайн</a>
                 </div>
                 <div class="contacts">
-                    <a href="tel:+7(812)425-62-76">
+                    <a :href="$store.getters.phoneHref">
                         <span>Получить консультацию</span>
-                        +7(812)425-62-76
+                        {{$store.state.phoneNumber}}
                     </a>
                 </div>
             </div>

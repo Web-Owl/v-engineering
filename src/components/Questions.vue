@@ -33,6 +33,7 @@ export default {
 <span class="wpcf7-form-control-wrap tel-297"><input type="tel" name="tel-297" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel inp" aria-required="true" aria-invalid="false" placeholder="Ваш телефон" /></span>
 <button class="button button_form">Задать вопрос</button>
 <h3>Или позвоните по телефону</h3>
-<a :href="$store.getters.phoneHref">{{$store.state.phoneNumber}}</a><div class="wpcf7-response-output" aria-hidden="true"></div></form></div>    </div>
+<!-- <a :href="$store.getters.phoneHref">{{$store.state.phoneNumber}}</a> -->
+<div class="wpcf7-response-output" aria-hidden="true"></div></form></div>    </div>
 </section>
 </template>

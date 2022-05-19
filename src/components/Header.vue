@@ -8,7 +8,7 @@ export default {
     <header class="main-header" style="background: url(https://video.taksecure.ru/wp-content/uploads/2022/04/header-bg-1.jpg) center; -webkit-background-size: cover; background-size: cover;">
         <div class="container grid">
             <div class="item">
-                <a href=""><img src="https://video.taksecure.ru/wp-content/uploads/2022/03/logo3.png" alt="" class="logo img-responsive"></a>
+                <a href=""><img src="@/assets/img/logoza-ru-hd.png" alt="" class="logo img-responsive"></a>
             </div>
             <div class="item grid item-header-a">
                 <div class="grid header-a">
@@ -26,9 +26,8 @@ export default {
             </div>
             <div class="item telefon-block">
                 <h4>Есть вопросы? Звоните:</h4>
-                <a class="phone" :href="$store.getters.phoneHref">{{$store.state.phoneNumber}}</a>
-                <p>Без выходных с 09:00-21:00<br><a class="email" :href="$store.getters.mailTo">{{$store.state.email}}</a>
-                </p>
+                <!-- <a class="phone" :href="$store.getters.phoneHref">{{$store.state.phoneNumber}}</a>
+                <p>Без выходных с 09:00-21:00<br><a class="email" :href="$store.getters.mailTo">{{$store.state.email}}</a> -->
             </div>
             <div class="item">
                 <a href="#" data-modal=".callback-2" class="mobile_b" style="display: none;float: right;margin-right: 20px;margin-top: 8px;">

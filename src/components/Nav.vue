@@ -25,7 +25,7 @@ export default {
                     <a class="nav-link" href="#s8">Камера Онлайн</a>
                 </li>
                 <li class="lasts">
-                    <a :href="$store.getters.phoneHref">{{$store.state.phoneNumber}}</a>
+                    <!-- <a :href="$store.getters.phoneHref">{{$store.state.phoneNumber}}</a> -->
                 </li>
             </ul>
         </nav>
@@ -42,10 +42,10 @@ export default {
                     <a class="nav-link" href="#s8">Камера Онлайн</a>
                 </div>
                 <div class="contacts">
-                    <a :href="$store.getters.phoneHref">
+                    <!-- <a :href="$store.getters.phoneHref">
                         <span>Получить консультацию</span>
                         {{$store.state.phoneNumber}}
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </nav>

@@ -1,15 +1,117 @@
 <script>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { mapState } from 'vuex'
+
 export default {
-  name: 'projects-item',
+    computed: mapState({
+     projects: state => state.projects.all
+  }),
+  created () {
+    this.$store.dispatch('projects/getAllProjects')
+  },
+    name: 'projects-item',
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
+    setup() {
+      const onSwiper = (swiper) => {
+        console.log(swiper);
+      };
+      const onSlideChange = () => {
+        console.log('slide change');
+      };
+      return {
+        onSwiper,
+        onSlideChange,
+        modules: [Navigation],
+      };
+    },
 };
 </script>
 <template>
-    <section id="s7" class="slider s7" style="background: url(https://video.taksecure.ru/wp-content/uploads/2022/02/slider-bg.png) center; -webkit-background-size: cover; background-size: cover;">
+<section id="s7" class="slider s7" style="background: url(https://video.taksecure.ru/wp-content/uploads/2022/02/slider-bg.png) center; -webkit-background-size: cover; background-size: cover;">
     <div class="container">
         <div class="slider-h">
-            <h2>
-                РЕАЛИЗОВАННЫЕ ПРОЕКТЫ            </h2>
+            <h2>РЕАЛИЗОВАННЫЕ ПРОЕКТЫ</h2>
         </div>
+        <swiper
+        :modules="modules"
+        :slides-per-view="1"
+        :space-between="50"
+        navigation
+        :pagination="{ clickable: true }"
+        :scrollbar="{ draggable: true }"
+        @swiper="onSwiper"
+        @slideChange="onSlideChange"
+    >
+        <swiper-slide v-for="project in projects" :key="project.id">
+        <div class="main grid" >
+            <div class="div">
+                <img src="https://video.taksecure.ru/wp-content/uploads/2022/02/acb42a1083518e13ca8a3d219c5cc3c61.jpg" alt="" class="img-responsive">
+            </div>
+            <div class="task">
+                <h2 class="h21">Объект:</h2>
+                <p>{{project.object}}</p>
+                <h2 class="h22">Задача</h2>
+                <p v-for="item in project.description" :key="item">
+                    {{item}}
+                </p>
+                <h2 class="h23">Решение:</h2>
+                <p>{{project.solution}}</p>
+                <h2 class="h24">Результат:</h2>
+                <p>{{project.result}}</p>
+                <h2 class="h25">Стоимость в других компаниях:</h2>
+                <p>{{project.another_price}} рублей</p>
+                <h2 class="h26">Стоимость у нас:</h2>
+                <p>{{project.our_price}} рублей <span v-show="project.tax">с НДС</span></p>
+            </div>
+        </div>
+        </swiper-slide>
+
+    </swiper>
+   </div>
+</section>
+
+    <!-- <section id="s7" class="slider s7" style="background: url(https://video.taksecure.ru/wp-content/uploads/2022/02/slider-bg.png) center; -webkit-background-size: cover; background-size: cover;">
+    <div class="container">
+        <div class="slider-h">
+            <h2>РЕАЛИЗОВАННЫЕ ПРОЕКТЫ</h2>
+        </div>
+        <swiper
+            :modules="modules"
+            :slides-per-view="1"
+            :space-between="50"
+            navigation
+            @swiper="onSwiper"
+            @slideChange="onSlideChange"
+        >
+            <swiper-slide>
+                <div class="main grid" >
+                    
+                    <div class="task">
+                        <h2 class="h21">Объект:</h2>
+                        <p>{{item.object}}</p>
+                        <h2 class="h22">Задача</h2>
+                        <p>Наблюдение за работой сотрудников, кассовой зоной и входом в сервис. Пресечение махинаций со стороны сотрудников и клиентов.</p>
+                        <h2 class="h23">Решение:</h2>
+                        <p>4 FullHD видеокамеры, видеоархив с возможностью хранения записей за 14 дней, просмотр с любого устройства - компьютер, телефон, планшет.</p>
+                        <h2 class="h24">Результат:</h2>
+                        <p>Повышение дисциплины сотрудников. Быстрое решение спорных ситуаций с клиентами. Контроль пробития чеков - значительное увеличение выручки. Система окупилась за 1.5 месяца!</p>
+                        <h2 class="h25">Стоимость в других компаниях:</h2>
+                        <p>36000 рублей.</p>
+                        <h2 class="h26">Стоимость у нас:</h2>
+                        <p>34700 рублей с НДС</p>
+                        <button data-form="У нас похожая задача:Cеть сервисных центров по ремонту телефонов FastFix." class="button" data-modal=".callback-4">У нас похожая задача</button>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide>Slide 2</swiper-slide>
+            <swiper-slide>Slide 3</swiper-slide>
+        </swiper>
         <div class="s7-slider">
                             <div class="slide">
                     <div class="main grid">
@@ -145,5 +247,5 @@ export default {
                 </div>
                     </div>
     </div>
-</section>
+</section> -->
 </template>

@@ -1,21 +1,18 @@
 <script>
-import {mapGetters} from 'vuex';
+
 export default {
-    
+    props:[
+        'phoneHref',
+        'mailTo'
+    ],
   name: 'footer-item',
-  computed: {
-    ...mapGetters(
-        {
-            phoneHref: "projects/phoneHref",
-            mailTo: "projects/mailTo"
-        }
-    )
-}
+  
 };
 </script>
 <template>
     <footer class="footer grid">
     <div>
+        <p class="text">ИП Сочненков</p>
         <p class="text">ООО «Видео-инжиниринг»</p>
         <p class="text">{{$store.state.projects.address}}</p>
             

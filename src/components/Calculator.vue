@@ -61,11 +61,11 @@ export default {
                   wpcf7-validates-as-required
                   wpcf7-validates-as-tel
                 "
-                id="phone"
+                id="modalphone"
                 aria-required="true"
                 aria-invalid="false"
                 placeholder="8 916 123 45 67"
-            /></span>
+            /></span> 
           </div>
           <div class="sub-item"></div>
         </div>

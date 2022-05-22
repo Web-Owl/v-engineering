@@ -1,6 +1,6 @@
 <template>
-  <Nav/>
-  <Header/>
+  <Nav :phoneHref='phoneHref' :mailTo='mailTo'/>
+  <Header :phoneHref='phoneHref' :mailTo='mailTo'/>
   <Offer/>
   <Solve/>
   <Calculator/>
@@ -8,8 +8,8 @@
   <Benefits/>
   <Projects/>
   <GetIt/>
-  <Questions/>
-  <Footer/>
+  <Questions :phoneHref='phoneHref'/>
+  <Footer :phoneHref='phoneHref' :mailTo='mailTo'/>
 </template>
 
 <script>
@@ -24,6 +24,12 @@ import Projects from './components/Projects.vue'
 import GetIt from './components/GetIt.vue'
 import Questions from './components/Questions.vue'
 import Footer from './components/Footer.vue'
+import {mapGetters} from 'vuex'
+import jQuery from "jquery";
+window.jQuery = window.$ = jQuery
+import Inputmask from "inputmask";
+import { $ } from 'dom7'
+
 
 export default {
   name: 'App',
@@ -39,6 +45,20 @@ export default {
     GetIt,
     Questions,
     Footer
+  },
+  computed: {
+    ...mapGetters(
+        {
+            phoneHref: "projects/phoneHref",
+            mailTo: "projects/mailTo"
+        }
+    )
+},
+ mounted(){
+    $('input[type=tel]').each(function(){
+      var im = new Inputmask("+7 (999) 999-99-99");
+      im.mask(this);
+    });
   }
 }
 </script>

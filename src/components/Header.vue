@@ -1,6 +1,11 @@
 <script>
+
 export default {
-  name: 'header-item'
+    props:[
+        'phoneHref',
+        'mailTo'
+    ],
+  name: 'header-item',
 }
 </script>
 
@@ -26,8 +31,8 @@ export default {
             </div>
             <div class="item telefon-block">
                 <h4>Есть вопросы? Звоните:</h4>
-                <!-- <a class="phone" :href="$store.getters.phoneHref">{{$store.state.phoneNumber}}</a>
-                <p>Без выходных с 09:00-21:00<br><a class="email" :href="$store.getters.mailTo">{{$store.state.email}}</a> -->
+                <a class="phone" :href="phoneHref">{{$store.state.projects.phoneNumber}}</a>
+                <p>Без выходных с 09:00-21:00<br><a class="email" :href="mailTo">{{$store.state.projects.email}}</a></p>
             </div>
             <div class="item">
                 <a href="#" data-modal=".callback-2" class="mobile_b" style="display: none;float: right;margin-right: 20px;margin-top: 8px;">
@@ -59,21 +64,6 @@ export default {
                         <ul></ul>
                     </div>
                     <form action="/#wpcf7-f93-o1" method="post" class="wpcf7-form init form2" novalidate="novalidate" data-status="init">
-                        <div style="display: none;">
-                            <input type="hidden" name="_wpcf7" value="93"/>
-                            <input type="hidden" name="_wpcf7_version" value="5.5.6"/>
-                            <input type="hidden" name="_wpcf7_locale" value="ru_RU"/>
-                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f93-o1"/>
-                            <input type="hidden" name="_wpcf7_container_post" value="0"/>
-                            <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>
-                            <input type="hidden" name="_wpcf7cf_hidden_group_fields" value=""/>
-                            <input type="hidden" name="_wpcf7cf_hidden_groups" value=""/>
-                            <input type="hidden" name="_wpcf7cf_visible_groups" value=""/>
-                            <input type="hidden" name="_wpcf7cf_repeaters" value="[]"/>
-                            <input type="hidden" name="_wpcf7cf_steps" value="{}"/>
-                            <input type="hidden" name="_wpcf7cf_options" value="{&quot;form_id&quot;:93,&quot;conditions&quot;:[],&quot;settings&quot;:{&quot;animation&quot;:&quot;yes&quot;,&quot;animation_intime&quot;:200,&quot;animation_outtime&quot;:200,&quot;notice_dismissed&quot;:false,&quot;regex_numeric&quot;:&quot;^[0-9]+$&quot;,&quot;regex_alphabetic&quot;:&quot;^[a-zA-Z]+$&quot;,&quot;regex_alphanumeric&quot;:&quot;^[a-zA-Z0-9]+$&quot;,&quot;regex_date&quot;:&quot;^(0?[1-9]|1[012])[- .](0?[1-9]|[12][0-9]|3[01])[- \/.](19|20)?[0-9]{2}$&quot;,&quot;regex_email&quot;:&quot;^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$&quot;,&quot;regex_numeric_label&quot;:&quot;numeric&quot;,&quot;regex_alphabetic_label&quot;:&quot;alphabetic&quot;,&quot;regex_alphanumeric_label&quot;:&quot;alphanumeric&quot;,&quot;regex_date_label&quot;:&quot;date&quot;,&quot;regex_email_label&quot;:&quot;email&quot;,&quot;regex_custom_1&quot;:&quot;&quot;,&quot;regex_custom_2&quot;:&quot;&quot;,&quot;regex_custom_3&quot;:&quot;&quot;,&quot;regex_custom_4&quot;:&quot;&quot;,&quot;regex_custom_5&quot;:&quot;&quot;,&quot;regex_custom_1_label&quot;:&quot;custom 1&quot;,&quot;regex_custom_2_label&quot;:&quot;custom 2&quot;,&quot;regex_custom_3_label&quot;:&quot;custom 3&quot;,&quot;regex_custom_4_label&quot;:&quot;custom 4&quot;,&quot;regex_custom_5_label&quot;:&quot;custom 5&quot;}}"/>
-                            <input type="hidden" name="_wpcf7_recaptcha_response" value=""/>
-                        </div>
                         <div class="in-form-2">
                             <h2>Получите предложение
                                 <span>конкретно для Вашего помещения за 9 минут</span>
@@ -81,7 +71,9 @@ export default {
                             <p class="text one" data-number="1">
                                 Оставьте свой номер телефона, и наш специалист свяжется с Вами в течение 9 минут для консультации
                             </p>
-                            <span class="wpcf7-form-control-wrap tel-384"><input type="tel" name="tel-384" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel tel" aria-required="true" aria-invalid="false"/></span>
+                            <span class="wpcf7-form-control-wrap tel-384">
+                                <input type="tel" placeholder="+7 (___) ___ - __- __" name="tel-384" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel tel" aria-required="true" aria-invalid="false" id="modalphone"/>
+                                </span>
                             <button id="button_form" class="button button_form">
                                 Получить это предложение
                                 <br>

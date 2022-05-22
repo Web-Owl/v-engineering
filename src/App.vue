@@ -1,6 +1,6 @@
 <template>
-  <Nav :phoneHref='phoneHref' :mailTo='mailTo'/>
-  <Header :phoneHref='phoneHref' :mailTo='mailTo'/>
+  <Nav :phoneHref='phoneHref' :mailTo='mailTo' @open-modal="isOpened"/>
+  <Header :phoneHref='phoneHref' :mailTo='mailTo' @open-modal="isOpened"/>
   <Offer/>
   <Solve/>
   <Calculator/>
@@ -10,6 +10,7 @@
   <GetIt/>
   <Questions :phoneHref='phoneHref'/>
   <Footer :phoneHref='phoneHref' :mailTo='mailTo'/>
+  <BaseModal v-if="showModal" @close-modal="showModal = false"/> 
 </template>
 
 <script>
@@ -29,6 +30,7 @@ import jQuery from "jquery";
 window.jQuery = window.$ = jQuery
 import Inputmask from "inputmask";
 import { $ } from 'dom7'
+import BaseModal from './components/BaseModal.vue';
 
 
 export default {
@@ -44,7 +46,8 @@ export default {
     Projects,
     GetIt,
     Questions,
-    Footer
+    Footer,
+    BaseModal
   },
   computed: {
     ...mapGetters(
@@ -54,11 +57,21 @@ export default {
         }
     )
 },
+methods: {
+   isOpened() {
+      this.showModal = true
+    }
+},
  mounted(){
     $('input[type=tel]').each(function(){
       var im = new Inputmask("+7 (999) 999-99-99");
       im.mask(this);
     });
+  },
+  data() {
+    return{
+      showModal: false,
+    }
   }
 }
 </script>

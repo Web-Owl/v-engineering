@@ -24,7 +24,7 @@ export default {
                 </div>
                 <div class="grid header-a">
                     <img src="https://video.taksecure.ru/wp-content/uploads/2022/02/phone.png" alt="">
-                    <a href="#" data-modal=".callback-2">
+                    <a data-modal=".callback-2" @click="$emit('openModal')">
                         <span>Заказать</span><br><span>звонок</span>
                     </a>
                 </div>
@@ -52,7 +52,7 @@ export default {
                     <br>и МО за
                     <span>48 часов</span>
                 </p>
-                    <a href="#s8">
+                    <a href="#s8" hidden>
                         <button class="button" style="display: block;">
                             Как работают наши камеры онлайн
                         </button>

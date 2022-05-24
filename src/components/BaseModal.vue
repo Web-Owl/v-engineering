@@ -16,12 +16,23 @@
         9 минут с Вами свяжется специалист
     </span>
 </h3>
-<span class="wpcf7-form-control-wrap tel-80"><input type="tel" name="tel-80" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel input" aria-required="true" aria-invalid="false" placeholder="Ваш телефон" /></span>
+<span class="wpcf7-form-control-wrap tel-80">
+    <input type="tel" ref="input" name="tel-80" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel input" aria-required="true" aria-invalid="false" placeholder="Ваш телефон" />
+    </span>
 <button class="button button_form">Получить консультацию</button>
-<input type="hidden" name="type-forms" value="" class="wpcf7-form-control wpcf7-hidden" /><div class="wpcf7-response-output" aria-hidden="true"></div></form>
+<div class="wpcf7-response-output" aria-hidden="true"></div></form>
 </div>    </div>
 
 </div>
 
   
 </template>
+<script>
+import Inputmask from "inputmask";
+export default {
+    mounted(){
+      var im = new Inputmask("+7 (999) 999-99-99");
+      im.mask(this.$refs.input);
+  }
+}
+</script>

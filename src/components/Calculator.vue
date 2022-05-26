@@ -7,11 +7,6 @@ export default {
   <div
     id="s4"
     class="section section-calculator s4"
-    style="
-      background: url(@/assets/img/backgrounds/calc-bg.png)
-        center;
-      background-size: cover;
-    "
   >
     <div class="container">
       <h2 class="section-calculator-h2">

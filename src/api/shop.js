@@ -1,6 +1,3 @@
-/**
- * Mocking client-server processing
- */
  const _projects = [
     {
       id: 'service_center',

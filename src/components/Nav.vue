@@ -1,6 +1,7 @@
 <script>
 import jQuery from "jquery";
 export default {
+    emits:['openModal'],
      props:[
         'phoneHref',
         'mailTo'

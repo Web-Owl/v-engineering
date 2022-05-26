@@ -31,8 +31,8 @@ export default {
             </div>
             <div class="item telefon-block">
                 <h4>Есть вопросы? Звоните:</h4>
-                <a class="phone" :href="phoneHref">{{$store.state.projects.phoneNumber}}</a>
-                <p>Без выходных с 09:00-21:00<br><a class="email" :href="mailTo">{{$store.state.projects.email}}</a></p>
+                <a class="phone" :href="phoneHref">{{$store.state.moduleCommon.phoneNumber}}</a>
+                <p>Без выходных с 09:00-21:00<br><a class="email" :href="mailTo">{{$store.state.moduleCommon.email}}</a></p>
             </div>
             <div class="item">
                 <a href="#" data-modal=".callback-2" class="mobile_b" style="display: none;float: right;margin-right: 20px;margin-top: 8px;">

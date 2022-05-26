@@ -52,8 +52,8 @@ export default {
   computed: {
     ...mapGetters(
         {
-            phoneHref: "projects/phoneHref",
-            mailTo: "projects/mailTo"
+            phoneHref: "moduleCommon/phoneHref",
+            mailTo: "moduleCommon/mailTo"
         }
     )
 },

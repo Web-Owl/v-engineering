@@ -3,18 +3,8 @@ import shop from '../../api/shop'
 // initial state
 const state = () => ({
   all: [],
- 
 })
 
-// getters
-const getters = {
-  phoneHref: function (state) {
-              return 'tel:' + `${state.phoneNumber}`.replace(/\s|\)|\(|-/g, '');
-            },
-  mailTo: function (state) {
-              return 'mailto:' + `${state.email}`
-            }
-}
 
 // actions
 const actions = {
@@ -34,7 +24,6 @@ const mutations = {
 export default {
   namespaced: true,
   state,
-  getters,
   actions,
   mutations
 }

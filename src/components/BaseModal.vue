@@ -4,7 +4,7 @@
 
     </div>
   <div class="callback callback-4">
-        <div class="colse" data-btn-type="close"  @click="$emit('closeModal')"></div>
+        <div class="colse" data-btn-type="close"  @click="$store.commit('moduleCommon/displayModal')"></div>
         <div role="form" class="wpcf7" id="wpcf7-f245-o8" lang="ru-RU" dir="ltr">
 <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
 <form action="/#wpcf7-f245-o8" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">

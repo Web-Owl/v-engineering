@@ -1,4 +1,7 @@
 <template>
+  <button @click="$store.commit('moduleCommon/displayModal')">
+    start mutation
+  </button>
   <Nav :phoneHref='phoneHref' :mailTo='mailTo' @open-modal="isOpened"/>
   <Header :phoneHref='phoneHref' :mailTo='mailTo' @open-modal="isOpened"/>
   <Offer/>
@@ -10,7 +13,7 @@
   <GetIt/>
   <Questions :phoneHref='phoneHref'/>
   <Footer :phoneHref='phoneHref' :mailTo='mailTo'/>
-  <BaseModal v-if="showModal" @close-modal="showModal = false"/> 
+  <BaseModal v-if="$store.state.moduleCommon.displayModal"/> 
 </template>
 
 <script>
@@ -31,7 +34,6 @@ window.jQuery = window.$ = jQuery
 import Inputmask from "inputmask";
 import { $ } from 'dom7'
 import BaseModal from './components/BaseModal.vue';
-
 
 export default {
   name: 'App',
@@ -58,9 +60,7 @@ export default {
     )
 },
 methods: {
-   isOpened() {
-      this.showModal = true
-    }
+   
 },
  mounted(){
     $('input[type=tel]').each(function(){

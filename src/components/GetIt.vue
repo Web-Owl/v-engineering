@@ -4,7 +4,7 @@ export default {
 };
 </script>
 <template>
-    <section class="section-oneday" style="background: url(@/assets/img/backgrounds/pre-last-bg.png) center; -webkit-background-size: cover; background-size: cover;">
+    <section class="section-oneday">
     <div class="container">
         <div class="header">
             <h2>

@@ -4,7 +4,7 @@ export default {
 };
 </script>
 <template>
-    <section class="section-problem" style="background: url(@/assets/img/backgrounds/s21.png) #00b0df center; -webkit-background-size: cover; background-size: cover;">
+    <section class="section-problem">
         <div class="container grid">
             <div class="problem_item">
                 <h2>

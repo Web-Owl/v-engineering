@@ -4,7 +4,7 @@ export default {
 }
 </script>
 <template>
-    <section class="section-projects s3" id="s3" style="background: url(@/assets/img/backgrounds/s3.png) #00020f center;">
+    <section class="section-projects s3" id="s3">
         <div class="container grid">
             <div class="projects_item">
                 <h2>

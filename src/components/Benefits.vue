@@ -4,7 +4,7 @@ export default {
 };
 </script>
 <template>
-    <section id="s6" class="section-money s6" style="background: url(@/assets/img/backgrounds/price-bg.png) center; -webkit-background-size: cover; background-size: cover;">
+    <section id="s6" class="section-money s6">
     <div class="container">
         <h2>
             ВАША ВЫГОДа <br> с нами        </h2>

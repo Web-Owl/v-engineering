@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-    <header class="main-header" style="background: url(@/assets/img/backgrounds/header-bg-1.jpg) center; -webkit-background-size: cover; background-size: cover;">
+    <header class="main-header">
         <div class="container grid">
             <div class="item">
                 <a href=""><img src="@/assets/img/icons/logoza-ru-hd.png" alt="" class="logo img-responsive"></a>

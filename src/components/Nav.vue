@@ -337,7 +337,7 @@ export default {
             <div class="container grid nav-menu-bar">
 
                 <div class="menu grid">
-                    <img src="@/assets/img/logo.png" alt="" class="logo img-responsive">
+                    <img src="@/assets/img/icons/logo.png" alt="" class="logo img-responsive">
                     <a class="nav-link" href="#s3">С кем работаем</a>
                     <a class="nav-link" href="#s4">Калькулятор</a>
                     <a class="nav-link" href="#s6">Ваши выгоды</a>

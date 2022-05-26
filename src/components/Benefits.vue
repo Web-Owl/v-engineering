@@ -4,19 +4,19 @@ export default {
 };
 </script>
 <template>
-    <section id="s6" class="section-money s6" style="background: url(https://video.taksecure.ru/wp-content/uploads/2022/02/price-bg.png) center; -webkit-background-size: cover; background-size: cover;">
+    <section id="s6" class="section-money s6" style="background: url(@/assets/img/backgrounds/price-bg.png) center; -webkit-background-size: cover; background-size: cover;">
     <div class="container">
         <h2>
             ВАША ВЫГОДа <br> с нами        </h2>
     </div>
     <div class="container container-2 grid">
                     <div class="item">
-                <img src="https://video.taksecure.ru/wp-content/uploads/2022/02/license1.png" alt="">
+                <img src="@/assets/img/benefits/license1.png" alt="">
                 <h3>Пожизненная гарантия</h3>
                 <p>Мы 100% уверены в качестве <br> предоставляемых услуг, и готовы дать <br> пожизненную гарантию на <br> оборудование при подписании <br> договора на обслуживание</p>
             </div>
                     <div class="item">
-                <img src="https://video.taksecure.ru/wp-content/uploads/2022/02/block1.png" alt="">
+                <img src="@/assets/img/benefits/block1.png" alt="">
                 <h3>100% конфиденциальность</h3>
                 <p>100% конфиденциальность данных с <br> камер видеонаблюдения.</p>
             </div>
@@ -42,12 +42,12 @@ export default {
 </ul>
         </div>
                         <div class="item">
-                    <img src="https://video.taksecure.ru/wp-content/uploads/2022/02/clock1.png" alt="">
+                    <img src="@/assets/img/benefits/clock1.png" alt="">
                     <h3>100% соблюдение сроков</h3>
                     <p>На все работы мы заключаем<br> договор, где четко прописываем<br> условия, этапы и сроки сдачи работ.</p>
                 </div>
                         <div class="item">
-                    <img src="https://video.taksecure.ru/wp-content/uploads/2022/02/person1.png" alt="">
+                    <img src="@/assets/img/benefits/person1.png" alt="">
                     <h3>Обученные специалисты</h3>
                     <p>Наши сотрудники проходят <br> специальное обучение, чтобы делать <br> все качественно и быстро.</p>
                 </div>

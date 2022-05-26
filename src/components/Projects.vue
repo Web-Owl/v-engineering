@@ -33,13 +33,13 @@ export default {
     },
     methods: {
         getImageUrl(name) {
-                return require('../assets/img/projects/' + name)
+                return require('@/assets/img/projects/' + name)
             }
         }
 };
 </script>
 <template>
-<section id="s7" class="slider s7" style="background: url(https://video.taksecure.ru/wp-content/uploads/2022/02/slider-bg.png) center; -webkit-background-size: cover; background-size: cover;">
+<section id="s7" class="slider s7" style="background: url(@/assets/img/backgrounds/slider-bg.png) center; -webkit-background-size: cover; background-size: cover;">
     <div class="container">
         <div class="slider-h">
             <h2>РЕАЛИЗОВАННЫЕ ПРОЕКТЫ</h2>

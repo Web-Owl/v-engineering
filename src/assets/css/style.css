@@ -273,12 +273,12 @@ template {
 
 .ui-spinner .ui-spinner-up {
     top: 0;
-    background-image: url(../img/up.png)
+    background-image: url(../img/icons/up.png)
 }
 
 .ui-spinner .ui-spinner-down {
     bottom: 0;
-    background-image: url(../img/down.png)
+    background-image: url(../img/icons/down.png)
 }
 
 g* {
@@ -331,7 +331,7 @@ body a {
 }
 
 .main-header {
-    background: url(../img/header-bg.png) center;
+    background: url(../img/backgrounds/header-bg.png) center;
     padding-bottom: 120px;
     -webkit-background-size: cover;
     background-size: cover
@@ -502,7 +502,7 @@ li:before {
 }
 
 .section-product {
-    background: url(../img/s3.png) #000 center;
+    background: url(../img/backgrounds/s3.png) #000 center;
     -webkit-background-size: cover;
     background-size: cover;
     position: relative
@@ -578,7 +578,7 @@ li:before {
 }
 
 .section-problem {
-    background: url(../img/s2.png) #00b0df center;
+    background: url(../img/backgrounds/s2.png) #00b0df center;
     -webkit-background-size: cover;
     background-size: cover;
     position: relative
@@ -610,7 +610,7 @@ li:before {
     z-index: 1;
     left: -webkit-calc(50% - 113px);
     left: calc(50% - 113px);
-    background: url(../img/s1b.png) center no-repeat;
+    background: url(../img/backgrounds/s1b.png) center no-repeat;
     top: 31%
 }
 
@@ -663,13 +663,13 @@ li:before {
     z-index: 1;
     left: -webkit-calc(50% - 113px);
     left: calc(50% - 113px);
-    background: url(../img/s1b2.png) center no-repeat;
+    background: url(../img/backgrounds/s1b2.png) center no-repeat;
     top: 32%
 }
 
 .section-projects {
     padding-bottom: 50px;
-    background: url(../img/s3.png) #00020f center
+    background: url(../img/backgrounds/s3.png) #00020f center
 }
 
 .section-projects .projects_item:nth-child(1) {
@@ -699,7 +699,7 @@ li:before {
     z-index: 5;
     left: -webkit-calc(50% - 113px);
     left: calc(50% - 113px);
-    background: url(../img/s1b.png) center no-repeat;
+    background: url(../img/backgrounds/s1b.png) center no-repeat;
     top: -57px
 }
 
@@ -772,7 +772,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 input[type=number]::-webkit-inner-spin-button {
-    background: #eee url(../img/down.png) no-repeat 50% 50%;
+    background: #eee url(../img/icons/down.png) no-repeat 50% 50%;
     width: 14px;
     height: 14px;
     padding: 4px;
@@ -905,7 +905,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .section-calculator {
-    background: url(../img/calc-bg.png) center;
+    background: url(../img/backgrounds/calc-bg.png) center;
     -webkit-background-size: cover;
     background-size: cover
 }
@@ -1087,7 +1087,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .section-money {
-    background: url(../img/price-bg.png) center;
+    background: url(../img/backgrounds/price-bg.png) center;
     -webkit-background-size: cover;
     background-size: cover;
     color: #fff;
@@ -1178,7 +1178,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .section-oneday {
-    background: url(../img/pre-last-bg.png) center;
+    background: url(../img/backgrounds/pre-last-bg.png) center;
     -webkit-background-size: cover;
     background-size: cover;
     padding: 90px 0 100px
@@ -1607,7 +1607,7 @@ header .container:nth-child(2) {
 
 .slider {
     padding: 78px 0 110px 0;
-    background: url(../img/slider-bg.png) center;
+    background: url(../img/backgrounds/slider-bg.png) center;
     -webkit-background-size: cover;
     background-size: cover
 }
@@ -1679,23 +1679,23 @@ header .container:nth-child(2) {
 }
 
 .h21::before {
-    background: url(../img/1s.png)
+    background: url(../img/icons/1s.png)
 }
 
 .h22::before {
-    background: url(../img/2s.png)
+    background: url(../img/icons/2s.png)
 }
 
 .h23::before {
-    background: url(../img/3s.png)
+    background: url(../img/icons/3s.png)
 }
 
 .h24::before {
-    background: url(../img/4s.png)
+    background: url(../img/icons/4s.png)
 }
 
 .h25::before {
-    background: url(../img/5s.png)
+    background: url(../img/icons/5s.png)
 }
 
 .form1 {
@@ -1848,7 +1848,7 @@ li::before,ul::before {
     height: 19px;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../img/close.png)
+    background-image: url(../img/icons/close.png)
 }
 
 .modal .callback {
@@ -1970,7 +1970,7 @@ input, select {
     z-index: 1;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../img/arr.png);
+    background-image: url(../img/icons/arr.png);
     background-color: transparent!important;
     border: none!important;
     width: 32px;
@@ -2369,7 +2369,7 @@ input, select {
     }
 
     .section-oneday {
-        background-image: url(../img/slider-bg.png)!important;
+        background-image: url(../img/backgrounds/slider-bg.png)!important;
         padding-left: 15px;
         padding-right: 15px
     }

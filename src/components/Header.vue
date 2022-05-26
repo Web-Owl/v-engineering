@@ -10,20 +10,20 @@ export default {
 </script>
 
 <template>
-    <header class="main-header" style="background: url(https://video.taksecure.ru/wp-content/uploads/2022/04/header-bg-1.jpg) center; -webkit-background-size: cover; background-size: cover;">
+    <header class="main-header" style="background: url(@/assets/img/backgrounds/header-bg-1.jpg) center; -webkit-background-size: cover; background-size: cover;">
         <div class="container grid">
             <div class="item">
-                <a href=""><img src="@/assets/img/logoza-ru-hd.png" alt="" class="logo img-responsive"></a>
+                <a href=""><img src="@/assets/img/icons/logoza-ru-hd.png" alt="" class="logo img-responsive"></a>
             </div>
             <div class="item grid item-header-a">
                 <div class="grid header-a">
-                    <img src="https://video.taksecure.ru/wp-content/uploads/2022/02/human.png" alt="">
+                    <img src="@/assets/img/header/human.png" alt="">
                     <a href="#" data-modal=".callback-1">
                         <span>Вызвать</span><br><span>специалиста</span>
                     </a>
                 </div>
                 <div class="grid header-a">
-                    <img src="https://video.taksecure.ru/wp-content/uploads/2022/02/phone.png" alt="">
+                    <img src="@/assets/img/header/phone.png" alt="">
                     <a data-modal=".callback-2" @click="$emit('openModal')">
                         <span>Заказать</span><br><span>звонок</span>
                     </a>

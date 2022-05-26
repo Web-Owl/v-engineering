@@ -1,11 +1,13 @@
 import { createStore, createLogger } from 'vuex'
 import projects from './modules/projects'
+import common from './modules/common'
 
 const debug = process.env.NODE_ENV !== 'production'
 
 export default createStore({
     modules: {
-      projects
+      projects,
+      common
       },
     strict: debug,
     plugins: debug ? [createLogger()] : []

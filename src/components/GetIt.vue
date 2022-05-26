@@ -4,7 +4,7 @@ export default {
 };
 </script>
 <template>
-    <section class="section-oneday" style="background: url(https://video.taksecure.ru/wp-content/uploads/2022/02/pre-last-bg.png) center; -webkit-background-size: cover; background-size: cover;">
+    <section class="section-oneday" style="background: url(@/assets/img/backgrounds/pre-last-bg.png) center; -webkit-background-size: cover; background-size: cover;">
     <div class="container">
         <div class="header">
             <h2>

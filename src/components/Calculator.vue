@@ -8,7 +8,7 @@ export default {
     id="s4"
     class="section section-calculator s4"
     style="
-      background: url(https://video.taksecure.ru/wp-content/uploads/2022/02/calc-bg.png)
+      background: url(@/assets/img/backgrounds/calc-bg.png)
         center;
       background-size: cover;
     "
@@ -97,15 +97,15 @@ export default {
                 <h4 class="qsecond"></h4>
               </div>
               <a
-                href="https://video.taksecure.ru/wp-content/uploads/2022/02/pic.png"
+                href="@/assets/img/calculator/pic.png"
                 ><img
-                  src="https://video.taksecure.ru/wp-content/uploads/2022/02/pic.png"
+                  src="@/assets/img/calculator/pic.png"
                   alt="car"
               /></a>
               <a
-                href="https://video.taksecure.ru/wp-content/uploads/2022/02/zoom11.png"
+                href="@/assets/img/calculator/zoom11.png"
                 ><img
-                  src="https://video.taksecure.ru/wp-content/uploads/2022/02/zoom11.png"
+                  src="@/assets/img/calculator/zoom11.png"
                   alt="zoom1"
               /></a>
               <a
@@ -120,15 +120,15 @@ export default {
                 <h4 class="qsecond"></h4>
               </div>
               <a
-                href="https://video.taksecure.ru/wp-content/uploads/2022/02/pic.png"
+                href="@/assets/img/calculator/pic.png"
                 ><img
-                  src="https://video.taksecure.ru/wp-content/uploads/2022/02/pic.png"
+                  src="@/assets/img/calculator/pic.png"
                   alt="car"
               /></a>
               <a
-                href="https://video.taksecure.ru/wp-content/uploads/2022/02/zoom21.png"
+                href="@/assets/img/calculator/zoom21.png"
                 ><img
-                  src="https://video.taksecure.ru/wp-content/uploads/2022/02/zoom21.png"
+                  src="@/assets/img/calculator/zoom21.png"
                   alt="zoom1"
               /></a>
               <a
@@ -143,15 +143,15 @@ export default {
                 <h4 class="qsecond"></h4>
               </div>
               <a
-                href="https://video.taksecure.ru/wp-content/uploads/2022/02/pic.png"
+                href="@/assets/img/calculator/pic.png"
                 ><img
-                  src="https://video.taksecure.ru/wp-content/uploads/2022/02/pic.png"
+                  src="@/assets/img/calculator/pic.png"
                   alt="car"
               /></a>
               <a
-                href="https://video.taksecure.ru/wp-content/uploads/2022/02/zoom31.png"
+                href="@/assets/img/calculator/zoom31.png"
                 ><img
-                  src="https://video.taksecure.ru/wp-content/uploads/2022/02/zoom31.png"
+                  src="@/assets/img/calculator/zoom31.png"
                   alt="zoom1"
               /></a>
               <a

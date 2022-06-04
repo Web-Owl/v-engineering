@@ -1,12 +1,6 @@
 <script>
-
 export default {
-    props:[
-        'phoneHref',
-        'mailTo'
-    ],
-  name: 'footer-item',
-  
+  name: 'footer-item'
 };
 </script>
 <template>

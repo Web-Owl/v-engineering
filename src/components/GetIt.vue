@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'getit-item',
+  name: 'get-it-item',
 };
 </script>
 <template>

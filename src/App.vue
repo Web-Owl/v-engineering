@@ -1,81 +1,67 @@
-<template>
-  <button @click="$store.commit('moduleCommon/displayModal')">
-    start mutation
-  </button>
-  <Nav :phoneHref='phoneHref' :mailTo='mailTo' @open-modal="isOpened"/>
-  <Header :phoneHref='phoneHref' :mailTo='mailTo' @open-modal="isOpened"/>
-  <Offer/>
-  <Solve/>
-  <Calculator/>
-  <Price/>
-  <Benefits/>
-  <Projects/>
-  <GetIt/>
-  <Questions :phoneHref='phoneHref'/>
-  <Footer :phoneHref='phoneHref' :mailTo='mailTo'/>
-  <BaseModal v-if="$store.state.moduleCommon.displayModal"/> 
-</template>
-
 <script>
-import Header from './components/Header.vue'
-import Nav from './components/Nav.vue'
-import Offer from './components/Offer.vue'
-import Solve from './components/Solve.vue'
-import Calculator from './components/Calculator.vue'
-import Price from './components/Price.vue'
-import Benefits from './components/Benefits.vue'
-import Projects from './components/Projects.vue'
-import GetIt from './components/GetIt.vue'
-import Questions from './components/Questions.vue'
-import Footer from './components/Footer.vue'
-import {mapGetters} from 'vuex'
+import HeaderItem from "./components/Header.vue";
+import NavItem from "./components/Nav.vue";
+import OfferItem from "./components/Offer.vue";
+import SolveItem from "./components/Solve.vue";
+import CalculatorItem from "./components/Calculator.vue";
+import PriceItem from "./components/Price.vue";
+import BenefitsItem from "./components/Benefits.vue";
+import ProjectsItem from "./components/Projects.vue";
+import GetItItem from "./components/GetIt.vue";
+import QuestionsItem from "./components/Questions.vue";
+import FooterItem from "./components/Footer.vue";
+import BaseModalItem from "./components/BaseModal.vue";
+import { mapState } from "vuex";
+
 import jQuery from "jquery";
-window.jQuery = window.$ = jQuery
+window.jQuery = window.$ = jQuery;
 import Inputmask from "inputmask";
-import { $ } from 'dom7'
-import BaseModal from './components/BaseModal.vue';
+import { $ } from "dom7";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Header,
-    Nav,
-    Offer,
-    Solve,
-    Calculator,
-    Price,
-    Benefits,
-    Projects,
-    GetIt,
-    Questions,
-    Footer,
-    BaseModal
+    HeaderItem,
+    NavItem,
+    OfferItem,
+    SolveItem,
+    CalculatorItem,
+    PriceItem,
+    BenefitsItem,
+    ProjectsItem,
+    GetItItem,
+    QuestionsItem,
+    FooterItem,
+    BaseModalItem,
   },
   computed: {
-    ...mapGetters(
-        {
-            phoneHref: "moduleCommon/phoneHref",
-            mailTo: "moduleCommon/mailTo"
-        }
-    )
-},
-methods: {
-   
-},
- mounted(){
-    $('input[type=tel]').each(function(){
+    ...mapState({
+      isActive: (state) => state.moduleCommon.displayModal,
+    }),
+  },
+  mounted() {
+    $("input[type=tel]").each(function () {
       var im = new Inputmask("+7 (999) 999-99-99");
       im.mask(this);
     });
   },
-  data() {
-    return{
-      showModal: false,
-    }
-  }
-}
+};
 </script>
+<template>
+  <nav-item></nav-item>
+  <header-item></header-item>
+  <offer-item></offer-item>
+  <solve-item></solve-item>
+  <calculator-item></calculator-item>
+  <price-item></price-item>
+  <benefits-item></benefits-item>
+  <projects-item></projects-item>
+  <get-it-item></get-it-item>
+  <questions-item></questions-item>
+  <footer-item></footer-item>
+  <base-modal-item v-if="isActive"></base-modal-item>
+</template>
+
 
 <style>
-
 </style>

@@ -1,12 +1,12 @@
 <script>
 import jQuery from "jquery";
 export default {
+    name:'nav-item',
     emits:['openModal'],
      props:[
         'phoneHref',
         'mailTo'
     ],
-  name: 'nav-item',
   created(){
       function bringmenu() {
         800 < document.body.scrollTop || 800 < document.documentElement.scrollTop ? document.getElementById("navbar").style.top = "0" : document.getElementById("navbar").style.top = "-10vh"

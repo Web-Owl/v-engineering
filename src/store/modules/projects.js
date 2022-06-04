@@ -1,18 +1,12 @@
-import shop from '../../api/shop'
-
+import Project from '../../api/Project'
 // initial state
-const state = () => ({
-  all: [],
-})
+const state = {
+  all: []
+};
 
-
-// actions
-const actions = {
-  async getAllProjects ({ commit }) {
-    const projects = await shop.getProjects()
-    commit('setProjects', projects)
-  }
-}
+const getters = {
+  getAll: (state) => state.all
+};
 
 // mutations
 const mutations = {
@@ -21,8 +15,23 @@ const mutations = {
   }
 }
 
+// actions
+const actions = {
+  async getAllProjects({ commit }) {
+    try{
+      Project.all().then(response => {
+        console.log(response)
+        commit('setProjects', response.data)
+      })  
+    } catch(e) {
+      console.log(e)
+    }
+  }
+}
+
 export default {
   namespaced: true,
+  getters,
   state,
   actions,
   mutations

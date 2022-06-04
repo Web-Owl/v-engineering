@@ -1,10 +1,26 @@
+<script>
+import Inputmask from "inputmask";
+import {mapActions} from 'vuex'
+export default {
+    name: 'base-modal-item',
+    methods: {
+        ...mapActions({
+            toggle: 'moduleCommon/displayModal'
+        }),
+    },
+    mounted(){
+        var im = new Inputmask("+7 (999) 999-99-99");
+        im.mask(this.$refs.input);
+    }
+}
+</script>
 <template>
 <div class="modal">
     <div class="layout" data-btn-type="close">
 
     </div>
   <div class="callback callback-4">
-        <div class="colse" data-btn-type="close"  @click="$store.commit('moduleCommon/displayModal')"></div>
+        <div class="colse" data-btn-type="close"  @click="this.toggle()"></div>
         <div role="form" class="wpcf7" id="wpcf7-f245-o8" lang="ru-RU" dir="ltr">
 <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
 <form action="/#wpcf7-f245-o8" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
@@ -27,12 +43,3 @@
 
   
 </template>
-<script>
-import Inputmask from "inputmask";
-export default {
-    mounted(){
-      var im = new Inputmask("+7 (999) 999-99-99");
-      im.mask(this.$refs.input);
-  }
-}
-</script>

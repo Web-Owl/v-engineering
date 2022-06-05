@@ -5,14 +5,17 @@ export default {
   name: "header-item",
   computed: {
     ...mapGetters({
-      dealer: "dealer/getInfo"
+      dealer: "dealer/getInfo",
     }),
+    ...mapGetters(["users/getUserInfo"]),
   },
   methods: {
-    ...mapActions(["dealer/getDealerInfo", "moduleCommon/displayModal"]),
+    ...mapActions(["dealer/getDealerInfo", "moduleCommon/toggleModal"]),
+    ...mapActions("users", ["getUsers", "addUser", "updateLocalUser"]),
   },
   mounted() {
     this["dealer/getDealerInfo"]();
+    this.getUsers();
   },
 };
 </script>
@@ -30,13 +33,13 @@ export default {
       <div class="item grid item-header-a">
         <div class="grid header-a">
           <img src="@/assets/img/header/human.png" alt="" />
-          <a @click="this['moduleCommon/displayModal']()">
+          <a @click="this['moduleCommon/toggleModal']()">
             <span>Вызвать</span><br /><span>специалиста</span>
           </a>
         </div>
         <div class="grid header-a">
           <img src="@/assets/img/header/phone.png" alt="" />
-          <a @click="this['moduleCommon/displayModal']()">
+          <a @click="this['moduleCommon/toggleModal']()">
             <span>Заказать</span><br /><span>звонок</span>
           </a>
         </div>
@@ -96,11 +99,10 @@ export default {
             <ul></ul>
           </div>
           <form
-            action="/#wpcf7-f93-o1"
-            method="post"
+            @submit.prevent="
+              $store.dispatch('users/addUser', this['users/getUserInfo'])
+            "
             class="wpcf7-form init form2"
-            novalidate="novalidate"
-            data-status="init"
           >
             <div class="in-form-2">
               <h2>
@@ -114,9 +116,19 @@ export default {
               <span class="wpcf7-form-control-wrap tel-384">
                 <input
                   type="tel"
-                  placeholder="+7 (___) ___ - __- __"
-                  name="tel-384"
-                  value=""
+                  placeholder="+7 (___) ___-__-__"
+                  name="phone"
+                  pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                  required
+                  :value="['users/getUserInfo'].phone"
+                  @input="
+                    this.updateLocalUser({
+                      field: 'phone',
+                      value: $event.target.value,
+                    })
+                  "
+                  oninput="this.setCustomValidity('');"
+                  oninvalid="this.setCustomValidity('Обязательное поле')"
                   size="40"
                   class="
                     wpcf7-form-control
@@ -126,12 +138,10 @@ export default {
                     wpcf7-validates-as-tel
                     tel
                   "
-                  aria-required="true"
-                  aria-invalid="false"
                   id="modalphone"
                 />
               </span>
-              <button id="button_form" class="button button_form">
+              <button type="submit" id="button_form" class="button button_form">
                 Получить это предложение
                 <br />
                 БЕСПЛАТНО

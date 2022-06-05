@@ -11,7 +11,8 @@ import GetItItem from "./components/GetIt.vue";
 import QuestionsItem from "./components/Questions.vue";
 import FooterItem from "./components/Footer.vue";
 import BaseModalItem from "./components/BaseModal.vue";
-import { mapState } from "vuex";
+import BaseModalSuccess from "./components/BaseModalSuccess.vue";
+import { mapGetters } from "vuex";
 
 import jQuery from "jquery";
 window.jQuery = window.$ = jQuery;
@@ -33,11 +34,12 @@ export default {
     QuestionsItem,
     FooterItem,
     BaseModalItem,
+    BaseModalSuccess,
   },
   computed: {
-    ...mapState({
-      isActive: (state) => state.moduleCommon.displayModal,
-    }),
+   ...mapGetters({
+     isActive: 'moduleCommon/modalActive'
+    })
   },
   mounted() {
     $("input[type=tel]").each(function () {
@@ -59,9 +61,21 @@ export default {
   <get-it-item></get-it-item>
   <questions-item></questions-item>
   <footer-item></footer-item>
-  <base-modal-item v-if="isActive"></base-modal-item>
+  <transition name="modal">
+    <base-modal-item v-if="isActive"></base-modal-item>
+    <base-modal-success v-else-if="$store.state.moduleCommon.thanks"></base-modal-success>
+  </transition>
 </template>
 
 
 <style>
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
 </style>

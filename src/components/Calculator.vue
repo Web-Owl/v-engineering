@@ -1,13 +1,10 @@
 <script>
 export default {
-  name: 'calculator-item',
+  name: "calculator-item",
 };
 </script>
 <template>
-  <div
-    id="s4"
-    class="section section-calculator s4"
-  >
+  <div id="s4" class="section section-calculator s4">
     <div class="container">
       <h2 class="section-calculator-h2">
         Калькулятор стоимости системы видеонаблюдения
@@ -60,7 +57,7 @@ export default {
                 aria-required="true"
                 aria-invalid="false"
                 placeholder="8 916 123 45 67"
-            /></span> 
+            /></span>
           </div>
           <div class="sub-item"></div>
         </div>
@@ -91,22 +88,15 @@ export default {
                 <h4 class="qfirts"></h4>
                 <h4 class="qsecond"></h4>
               </div>
-              <a
-                href="@/assets/img/calculator/pic.png"
-                ><img
-                  src="@/assets/img/calculator/pic.png"
-                  alt="car"
-              /></a>
-              <a
-                href="@/assets/img/calculator/zoom11.png"
-                ><img
-                  src="@/assets/img/calculator/zoom11.png"
-                  alt="zoom1"
-              /></a>
-              <a
-                href="https://www.youtube.com/watch?v=aXxsNBQzko4"
+              <div
+                ><img src="@/assets/img/calculator/pic.png" alt="car"
+              /></div>
+              <div
+                ><img src="@/assets/img/calculator/zoom11.png" alt="zoom1"
+              /></div>
+              <div
                 rel="prettyPhoto"
-                ><span>Посмотреть видеофрагмент 2Mp</span></a
+                ><span>Посмотреть видеофрагмент 2Mp</span></div
               >
             </div>
             <div>
@@ -114,22 +104,15 @@ export default {
                 <h4 class="qfirts"></h4>
                 <h4 class="qsecond"></h4>
               </div>
-              <a
-                href="@/assets/img/calculator/pic.png"
-                ><img
-                  src="@/assets/img/calculator/pic.png"
-                  alt="car"
-              /></a>
-              <a
-                href="@/assets/img/calculator/zoom21.png"
-                ><img
-                  src="@/assets/img/calculator/zoom21.png"
-                  alt="zoom1"
-              /></a>
-              <a
-                href="https://www.youtube.com/watch?v=v9mWMN4SU-w"
+              <div
+                ><img src="@/assets/img/calculator/pic.png" alt="car"
+              /></div>
+              <div
+                ><img src="@/assets/img/calculator/zoom21.png" alt="zoom1"
+              /></div>
+              <div
                 rel="prettyPhoto"
-                ><span>Посмотреть видеофрагмент 4Mp</span></a
+                ><span>Посмотреть видеофрагмент 4Mp</span></div
               >
             </div>
             <div>
@@ -137,22 +120,15 @@ export default {
                 <h4 class="qfirts"></h4>
                 <h4 class="qsecond"></h4>
               </div>
-              <a
-                href="@/assets/img/calculator/pic.png"
-                ><img
-                  src="@/assets/img/calculator/pic.png"
-                  alt="car"
-              /></a>
-              <a
-                href="@/assets/img/calculator/zoom31.png"
-                ><img
-                  src="@/assets/img/calculator/zoom31.png"
-                  alt="zoom1"
-              /></a>
-              <a
-                href="https://www.youtube.com/watch?v=1Zq60p7WCeM"
+              <div
+                ><img src="@/assets/img/calculator/pic.png" alt="car"
+              /></div>
+              <div
+                ><img src="@/assets/img/calculator/zoom31.png" alt="zoom1"
+              /></div>
+              <div
                 rel="prettyPhoto"
-                ><span>Посмотреть видеофрагмент 8Mp</span></a
+                ><span>Посмотреть видеофрагмент 8Mp</span></div
               >
               <input
                 type="hidden"

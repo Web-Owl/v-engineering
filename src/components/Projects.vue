@@ -14,16 +14,16 @@ export default {
   },
   computed: {
     ...mapGetters({
-      projects: 'projects/getAll'
+      projects: "projects/getAll",
     }),
   },
   methods: {
-    ...mapActions(['projects/getAllProjects'])
+    ...mapActions(["projects/getAllProjects", "moduleCommon/toggleModal"]),
   },
   mounted() {
-    this['projects/getAllProjects']()
+    this["projects/getAllProjects"]();
   },
-  
+
   setup() {
     const onSwiper = (swiper) => {
       console.log(swiper);
@@ -36,7 +36,7 @@ export default {
       onSlideChange,
       modules: [Navigation, Pagination],
     };
-  }
+  },
 };
 </script>
 <template>
@@ -83,6 +83,12 @@ export default {
                 {{ project.our_price }} рублей
                 <span v-show="project.tax">с НДС</span>
               </p>
+              <button
+                @click="this['moduleCommon/toggleModal']()"
+                class="button"
+              >
+                У нас похожая задача
+              </button>
             </div>
           </div>
         </swiper-slide>

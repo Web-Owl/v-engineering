@@ -1,7 +1,7 @@
-import Http from './Http'
+import {http} from './Http'
 
 export default {
     all() {
-        return Http.get('dealers')
+        return http.get('dealers')
     }
 }

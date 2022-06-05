@@ -1,21 +1,46 @@
 <script>
+import { mapGetters, mapActions } from "vuex";
 export default {
   name: "questions-item",
+  methods: mapActions(["dealer/getDealerInfo"]),
+  computed: mapGetters({
+    dealer: "dealer/getInfo",
+  }),
+  mounted() {
+    this["dealer/getDealerInfo"]();
+  },
+  created: function () {
+    ymaps.ready(init);
+    function init() {
+      var myMap = new ymaps.Map("map", {
+        center: [55.671294, 37.490584],
+        zoom: 15,
+        controls: [],
+        
+      });
+
+      myMap.geoObjects.add(
+        new ymaps.Placemark(
+          [55.670818, 37.512434],
+          {
+            balloonContent:
+            "Москва, Ул. Удальцова, д. 3к1",
+            iconCaption: "Видео-инжиниринг",
+          },
+          {
+            preset: "islands#blueDotIcon",
+          }
+        )
+      );
+    }
+  },
 };
 </script>
 <template>
   <section id="s10" class="section-map s10">
     <div id="map">
-      <div style="position: relative; overflow: hidden">
-        <a
-          href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
-          style="color: #eee; font-size: 12px; position: absolute; top: 0px"
-          >Москва</a
-        ><a
-          href="https://yandex.ru/maps/213/moscow/?ll=37.622504%2C55.753215&utm_medium=mapframe&utm_source=maps&z=10"
-          style="color: #eee; font-size: 12px; position: absolute; top: 14px"
-          >Яндекс Карты — транспорт, навигация, поиск мест</a
-        ><iframe
+      <div id="map" style="width: 100%; height: 6500px"></div>
+      <!-- <div style="position: relative; overflow: hidden"><iframe
           src="https://yandex.ru/map-widget/v1/-/CGW1A~q"
           width="100%"
           height="650px"
@@ -23,7 +48,7 @@ export default {
           allowfullscreen="true"
           style="position: relative"
         ></iframe>
-      </div>
+      </div> -->
     </div>
     <div class="form grid">
       <div role="form" class="wpcf7" id="wpcf7-f214-o4" lang="ru-RU" dir="ltr">
@@ -38,25 +63,6 @@ export default {
           novalidate="novalidate"
           data-status="init"
         >
-          <div style="display: none">
-            <input type="hidden" name="_wpcf7" value="214" />
-            <input type="hidden" name="_wpcf7_version" value="5.5.6" />
-            <input type="hidden" name="_wpcf7_locale" value="ru_RU" />
-            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f214-o4" />
-            <input type="hidden" name="_wpcf7_container_post" value="0" />
-            <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-            <input type="hidden" name="_wpcf7cf_hidden_group_fields" value="" />
-            <input type="hidden" name="_wpcf7cf_hidden_groups" value="" />
-            <input type="hidden" name="_wpcf7cf_visible_groups" value="" />
-            <input type="hidden" name="_wpcf7cf_repeaters" value="[]" />
-            <input type="hidden" name="_wpcf7cf_steps" value="{}" />
-            <input
-              type="hidden"
-              name="_wpcf7cf_options"
-              value='{"form_id":214,"conditions":[],"settings":{"animation":"yes","animation_intime":200,"animation_outtime":200,"notice_dismissed":false,"regex_numeric":"^[0-9]+$","regex_alphabetic":"^[a-zA-Z]+$","regex_alphanumeric":"^[a-zA-Z0-9]+$","regex_date":"^(0?[1-9]|1[012])[- .](0?[1-9]|[12][0-9]|3[01])[- \/.](19|20)?[0-9]{2}$","regex_email":"^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$","regex_numeric_label":"numeric","regex_alphabetic_label":"alphabetic","regex_alphanumeric_label":"alphanumeric","regex_date_label":"date","regex_email_label":"email","regex_custom_1":"","regex_custom_2":"","regex_custom_3":"","regex_custom_4":"","regex_custom_5":"","regex_custom_1_label":"custom 1","regex_custom_2_label":"custom 2","regex_custom_3_label":"custom 3","regex_custom_4_label":"custom 4","regex_custom_5_label":"custom 5"}}'
-            />
-            <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
-          </div>
           <h2>Остались вопросы?</h2>
           <p>
             Введите свой вопрос и в течение 9 минут Вам ответит наш специалист
@@ -91,7 +97,9 @@ export default {
           /></span>
           <button class="button button_form">Задать вопрос</button>
           <h3>Или позвоните по телефону</h3>
-          <a :href="phoneHref">{{ $store.state.projects.phoneNumber }}</a>
+          <a :href="'tel:' + `${dealer.phone}`.replace(/\s|\)|\(|-/g, '')">{{
+            dealer.phone
+          }}</a>
           <div class="wpcf7-response-output" aria-hidden="true"></div>
         </form>
       </div>

@@ -1,18 +1,31 @@
 const state = {
-    displayModal: false,
-}
+    thanks: false,
+    isActive: false
+};
+
+const getters = {
+    modalActive: (state) => (state.isActive)
+};
 
 const mutations = {
-    displayModal: (state) => (state.displayModal =! state.displayModal),
-}
+    showThanks: (state) => (state.thanks = true),
+    toggleModal: (state) => (state.isActive =! state.isActive),
+    closeModal: (state) => (state.isActive = state.thanks = false)
+};
 
 const actions = {
-    displayModal: ({commit}) => (commit('displayModal')),
-};
+    toggleModal({commit}) {
+        commit("toggleModal");
+    },
+    closeModal({commit}) {
+        commit("closeModal");
+    }
+}
 
 export default {
     namespaced: true,
     actions,
+    getters,
     state,
     mutations
 }

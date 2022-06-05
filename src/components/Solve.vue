@@ -4,7 +4,7 @@ import { mapActions } from "vuex";
 export default {
   name: "solve-item",
   methods: {
-    ...mapActions(["moduleCommon/displayModal"]),
+    ...mapActions(["moduleCommon/toggleModal"]),
   },
 };
 </script>
@@ -27,7 +27,7 @@ export default {
           </div>
           <h2>Складов</h2>
           <h3>От 20 900 рублей</h3>
-          <button class="button" @click="this['moduleCommon/displayModal']()">
+          <button class="button" @click="this['moduleCommon/toggleModal']()">
             Рассчитать точную стоимость
           </button>
         </div>
@@ -41,9 +41,8 @@ export default {
           <h2>Ресторанов, баров кафе</h2>
           <h3>От 19 700 рублей</h3>
           <button
-            data-form="Рассчитать стоимость Ресторанов, баров кафе"
             class="button"
-            data-modal=".callback-3"
+            @click="this['moduleCommon/toggleModal']()"
           >
             Рассчитать точную стоимость
           </button>
@@ -58,9 +57,8 @@ export default {
           <h2>Производственных помещений</h2>
           <h3>От 21 260 рублей</h3>
           <button
-            data-form="Рассчитать стоимость Производственных помещений"
+            @click="this['moduleCommon/toggleModal']()"
             class="button"
-            data-modal=".callback-3"
           >
             Рассчитать точную стоимость
           </button>
@@ -75,9 +73,8 @@ export default {
           <h2>Магазинов</h2>
           <h3>От 19 700 рублей</h3>
           <button
-            data-form="Рассчитать стоимость Магазинов"
+            @click="this['moduleCommon/toggleModal']()"
             class="button"
-            data-modal=".callback-3"
           >
             Рассчитать точную стоимость
           </button>
@@ -92,9 +89,8 @@ export default {
           <h2>Автостоянок</h2>
           <h3>От 25 680 рублей</h3>
           <button
-            data-form="Рассчитать стоимость Автостоянок"
+            @click="this['moduleCommon/toggleModal']()"
             class="button"
-            data-modal=".callback-3"
           >
             Рассчитать точную стоимость
           </button>
@@ -109,9 +105,8 @@ export default {
           <h2>Загородных домов Коттеджей</h2>
           <h3>От 24 700 рублей</h3>
           <button
-            data-form="Рассчитать стоимость Загородных домов Коттеджей"
+            @click="this['moduleCommon/toggleModal']()"
             class="button"
-            data-modal=".callback-3"
           >
             Рассчитать точную стоимость
           </button>
@@ -126,9 +121,8 @@ export default {
           <h2>Квартир</h2>
           <h3>От 8 990 рублей</h3>
           <button
-            data-form="Рассчитать стоимость Квартир"
+            @click="this['moduleCommon/toggleModal']()"
             class="button"
-            data-modal=".callback-3"
           >
             Рассчитать точную стоимость
           </button>
@@ -143,9 +137,8 @@ export default {
           <h2>Любых других объектов</h2>
           <h3>От 12 000 рублей</h3>
           <button
-            data-form="Рассчитать стоимость Любых других объектов"
             class="button"
-            data-modal=".callback-3"
+            @click="this['moduleCommon/toggleModal']()"
           >
             Рассчитать точную стоимость
           </button>

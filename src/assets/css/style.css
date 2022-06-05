@@ -358,13 +358,15 @@ body a {
 .header-a {
     grid-template-columns: 46px 1fr;
     padding: 35px 18px
+    
 }
 
 .header-a a {
     padding-left: 18px;
     color: #fff;
     font-size: 16px;
-    line-height: 1.2
+    line-height: 1.2;
+    cursor: pointer
 }
 
 .header-a a span {

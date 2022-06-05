@@ -36,6 +36,7 @@ export default {
             $store.dispatch('users/addUser', this['users/getUserInfo'])
           "
           class="wpcf7-form init"
+          id="modalForm"
         >
           <h3 class="form-heading">
             Бесплатная консультация

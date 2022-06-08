@@ -411,7 +411,7 @@ export default {
       </li>
     </ul>
   </nav>
-  <nav id="navbar" class="navbar">
+  <nav id="navbar" class="overflow-hidden ease-linear grid-cols-2 fixed w-full -top-[10vh] h-[82px] bg-white items-center z-10 hidden tablet:block">
     <div class="container grid nav-menu-bar">
       <div class="menu grid">
         <img

@@ -9,12 +9,16 @@
     "db:serve": "json-server --watch db.json"
   },
   "dependencies": {
+    "-": "0.0.1",
+    "autoprefixer": "^10.4.7",
     "axios": "^0.27.2",
     "core-js": "^3.8.3",
     "inputmask": "^5.0.7",
     "jquery": "^3.6.0",
     "json-server": "^0.17.0",
+    "postcss": "^8.4.14",
     "swiper": "^8.1.5",
+    "tailwindcss": "^3.0.24",
     "vue": "^3.2.13",
     "vuex": "^4.0.2"
   },

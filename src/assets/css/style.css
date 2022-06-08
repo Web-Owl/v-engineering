@@ -442,7 +442,7 @@ li:before {
 }
 
 #navbar {
-    overflow: hidden;
+    /* overflow: hidden;
     -webkit-transition: top .5s linear;
     -o-transition: top .5s linear;
     transition: top .5s linear;
@@ -455,7 +455,7 @@ li:before {
     z-index: 10;
     -webkit-align-content: center;
     -ms-flex-line-pack: center;
-    align-content: center
+    align-content: center */
 }
 
 #navbar .nav-menu-bar {

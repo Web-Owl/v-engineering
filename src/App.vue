@@ -50,21 +50,21 @@ export default {
 };
 </script>
 <template>
-  <nav-item></nav-item>
-  <header-item></header-item>
-  <offer-item></offer-item>
-  <solve-item></solve-item>
-  <calculator-item></calculator-item>
-  <price-item></price-item>
-  <benefits-item></benefits-item>
-  <projects-item></projects-item>
-  <get-it-item></get-it-item>
-  <questions-item></questions-item>
-  <footer-item></footer-item>
-  <transition name="modal">
-    <base-modal-item v-if="isActive"></base-modal-item>
-    <base-modal-success v-else-if="$store.state.moduleCommon.thanks"></base-modal-success>
-  </transition>
+    <nav-item></nav-item>
+    <header-item></header-item>
+    <offer-item></offer-item>
+    <solve-item></solve-item>
+    <calculator-item></calculator-item>
+    <price-item></price-item>
+    <benefits-item></benefits-item>
+    <projects-item></projects-item>
+    <get-it-item></get-it-item>
+    <questions-item></questions-item>
+    <footer-item></footer-item>
+    <transition name="modal">
+      <base-modal-item v-if="isActive"></base-modal-item>
+      <base-modal-success v-else-if="$store.state.moduleCommon.thanks"></base-modal-success>
+    </transition>
 </template>
 
 

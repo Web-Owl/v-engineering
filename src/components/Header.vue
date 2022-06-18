@@ -12,6 +12,7 @@ export default {
   methods: {
     ...mapActions(["dealer/getDealerInfo", "moduleCommon/toggleModal"]),
     ...mapActions("users", ["getUsers", "addUser", "updateLocalUser"]),
+    
   },
   mounted() {
     this["dealer/getDealerInfo"]();
@@ -101,7 +102,9 @@ export default {
           <form
             @submit.prevent="
               $store.dispatch('users/addUser', this['users/getUserInfo'])
-            "
+              "
+              id="mainForm"
+            
             class="wpcf7-form init form2"
           >
             <div class="in-form-2">

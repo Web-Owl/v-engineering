@@ -45,7 +45,8 @@ const actions = {
             console.log(e);
         }
         try {
-            let formData = new FormData(modalForm);
+            let formData = new FormData();
+            formData.append('phone', getUserInfo.phone.match(/\+?\d+/g).join(""))
             const res = await User.mail(formData).then(function (response) {
                 ym(88702044, 'reachGoal', 'send_form')
                 console.log(response);

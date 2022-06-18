@@ -1,8 +1,7 @@
 import axios from "axios";
-import { END_POINT } from "@/store/modules/constants";
 
 export const http = axios.create({
-  baseURL: END_POINT,
+  baseURL: process.env.VUE_APP_BASE_URL,
   withCredentials: false,
   headers: {
     Accept: "application/json"

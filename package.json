@@ -15,6 +15,7 @@
     "core-js": "^3.8.3",
     "inputmask": "^5.0.7",
     "jquery": "^3.6.0",
+    "jquery.easing": "^1.4.1",
     "json-server": "^0.17.0",
     "postcss": "^8.4.14",
     "swiper": "^8.1.5",

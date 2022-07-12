@@ -323,7 +323,7 @@ export default {
               scrollTop: menu.scrollTop() + (dir ? 100 : -100),
             },
             3000,
-            "easeOutQuint"
+            "linear"
           );
           lastY = undefined;
         },

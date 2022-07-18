@@ -16,7 +16,6 @@ export default {
         center: [55.671294, 37.490584],
         zoom: 15,
         controls: [],
-        
       });
 
       myMap.geoObjects.add(
@@ -32,6 +31,20 @@ export default {
           }
         )
       );
+      function onResizeMap() {
+        if ($(window).width() > '992') { 
+            //Set New center
+            myMap.setCenter([55.671294, 37.490584]);
+            var pixelCenter2 = myMap.getGlobalPixelCenter('map_page');
+            console.log(pixelCenter2);
+            } else {
+                myMap.setCenter([55.670818, 37.512434]);
+            }
+        } onResizeMap();
+
+        window.onresize = function () {
+            onResizeMap();
+        };
     }
   },
 };

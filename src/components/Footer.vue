@@ -9,6 +9,11 @@ export default {
   mounted() {
     this['dealer/getDealerInfo']();
   },
+  data() {
+    return {
+      offer: false
+    }
+  }
 };
 </script>
 <template>
@@ -27,6 +32,22 @@ export default {
         <a :href="`mailto:${dealer.email}`">{{ dealer.email }}</a
         ><br />
       </p>
+    </div>
+    <div class="flex justify-center col-span-2">
+      <p @click="offer = !offer" class="cursor-pointer">Подробные условия акции</p>
+    </div>
+    <div v-show="offer">
+      <p >*Максимальная выгода на покупку автомобиля рассчитывается путем суммирования выгод:</p>
+      <ol>
+        <li>по кредитной программе «Семейный автомобиль»;</li>
+        <li>по программе TRADE-IN (при сдаче автомобиля марки Chery);</li>
+        <li>прямой скидки от салона;</li>
+        <li>выгоды на покупку стандартного набора дополнительного оборудования для автомобиля. </li>
+      </ol>
+      <p>Максимальная выгода на каждый конкретный автомобиль из наличия рассчитывается индивидуально с клиентом в нашем салоне и может отличаться от указанной выгоды в предложении.</p>
+      <div class="legals-footnote">
+        <p>Не является публичной офертой. Подробности узнавайте в отделе продаж Chery Кунцево и EXEED Кунцево.</p>
+      </div>
     </div>
   </footer>
 </template>

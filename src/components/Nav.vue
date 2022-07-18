@@ -327,7 +327,7 @@ export default {
           );
           lastY = undefined;
         },
-
+        
         close: function (e) {
           if (!e.originalEvent) {
             return;
@@ -379,7 +379,7 @@ export default {
     $(document).ready(function () {
       if (isMob()) RDMobilemenu_autoinit('[data-type="navbar"]');
     });
-
+    
     function isMob() {
       return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent

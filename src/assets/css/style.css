@@ -723,7 +723,7 @@ li:before {
     font-weight: 500;
     line-height: 36px;
     letter-spacing: .6px;
-    height: 90px
+    height: 100px
 }
 
 .section-projects .projects_item:nth-child(2) h3 {
@@ -1408,7 +1408,7 @@ header .container:nth-child(2) {
 .form2 {
     margin-left: 60px;
     width: 440px;
-    height: 534px;
+    height: 600px;
     outline-offset: -10px;
     padding: 10px;
     outline: 1px solid #000;
@@ -1703,7 +1703,7 @@ header .container:nth-child(2) {
 .form1 {
     margin-left: 25%;
     background: #fff;
-    height: 307px;
+    height: 400px;
     width: 440px;
     outline-offset: -10px;
     padding: 10px;
@@ -2219,7 +2219,7 @@ input, select {
     }
 
     .projects_item-2 .item:nth-last-child(1) {
-        margin-left: 40px
+        /* margin-left: 40px */
     }
 
     .header-hone {
@@ -2355,9 +2355,11 @@ input, select {
     }
 
     .section-map {
+        /* display: none */
+    }
+    .section-map .form {
         display: none
     }
-
     .form1 {
         width: 100%
     }

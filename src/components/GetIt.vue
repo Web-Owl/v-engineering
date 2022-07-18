@@ -12,8 +12,7 @@ export default {
         </h2>
       </div>
       <div class="content grid">
-        <div class="item">
-          <h2>Сейчас</h2>
+        <div class="item max-w-[420px]">
           <!-- <p>Вы оставляете заявку на бесплатную консультацию <br>или звоните по телефону {{$store.state.phoneNumber}}</p> -->
           <h2>15 минут</h2>
           <p>

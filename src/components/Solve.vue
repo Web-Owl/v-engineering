@@ -154,12 +154,6 @@ export default {
           </button>
         </div>
       </div>
-      <div class="projects_item">
-        <span
-          >*Стоимость зависит от количества камер, <br />качества видеосъемки и
-          сложности монтажа</span
-        >
-      </div>
     </div>
   </section>
 </template>
